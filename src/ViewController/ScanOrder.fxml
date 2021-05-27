@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane minHeight="820.0" minWidth="500.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <GridPane layoutX="69.0" layoutY="116.0" maxHeight="600.0" maxWidth="500.0" minHeight="600.0" minWidth="500.0" prefHeight="600.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="80.0" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="600.0" prefHeight="600.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <AnchorPane maxHeight="80.0" minHeight="80.0" minWidth="500.0" prefHeight="80.0">
+               <children>
+                  <Label fx:id="orderNumberLabel" layoutX="6.0" layoutY="1.0" prefHeight="42.0" prefWidth="319.0" AnchorPane.bottomAnchor="37.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="175.0" AnchorPane.topAnchor="1.0">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="scanOptionsChoiceBox" layoutX="339.0" layoutY="7.0" maxWidth="150.0" minWidth="150.0" onMouseClicked="#onClick" prefHeight="32.0" prefWidth="150.0" AnchorPane.bottomAnchor="41.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="7.0" />
+                  <TextField fx:id="autoZyxelTextField" disable="true" layoutX="336.0" layoutY="48.0" onAction="#onAutoZyxelTextField" prefHeight="26.0" prefWidth="46.0" AnchorPane.bottomAnchor="6.0" AnchorPane.rightAnchor="118.0" AnchorPane.topAnchor="48.0" />
+                  <Label layoutX="390.0" layoutY="48.0" prefHeight="26.0" prefWidth="76.0" text="Auto Zyxel" AnchorPane.bottomAnchor="6.0" AnchorPane.rightAnchor="34.0" AnchorPane.topAnchor="48.0" />
+                  <CheckBox fx:id="autoIntIDCheckBox" layoutX="195.0" layoutY="52.0" mnemonicParsing="false" onAction="#onAutoIntIDCheckBox" text="Auto Int ID" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="211.0" AnchorPane.topAnchor="52.0" />
+                  <CheckBox fx:id="printingCartCheckBox" layoutX="34.0" layoutY="52.0" mnemonicParsing="false" onAction="#onPrintingCartCheckBox" text="Printing Cart" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="360.0" AnchorPane.topAnchor="52.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="350.0" minWidth="500.0" GridPane.rowIndex="1">
+               <children>
+                  <ScrollPane fx:id="scrollDisplay" mouseTransparent="true" prefHeight="800.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <content>
+                        <Label fx:id="displayArea" alignment="TOP_LEFT">
+                           <font>
+                              <Font name="System Bold" size="19.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </Label>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane maxHeight="70.0" minHeight="70.0" minWidth="500.0" prefHeight="70.0" GridPane.rowIndex="2">
+               <children>
+                  <TextField fx:id="inputField" layoutX="176.0" layoutY="22.0" onAction="#onInputField" prefHeight="70.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </AnchorPane>
+            <AnchorPane maxHeight="70.0" minHeight="70.0" minWidth="500.0" prefHeight="70.0" GridPane.rowIndex="3">
+               <children>
+                  <ButtonBar layoutX="275.0" layoutY="15.0" prefHeight="70.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <buttons>
+                        <Button fx:id="clearButton" mnemonicParsing="false" onAction="#onClearButton" text="Clear">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="rePrintButton" disable="true" layoutX="415.0" layoutY="27.0" mnemonicParsing="false" onAction="#onRePrintButton" text="Reprint">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="printButton" disable="true" layoutX="405.0" layoutY="29.0" mnemonicParsing="false" onAction="#onPrintButton" text="Print">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="backButton" layoutX="405.0" layoutY="29.0" mnemonicParsing="false" onAction="#onBackButton" text="Go Back">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                    </buttons>
+                     <padding>
+                        <Insets right="20.0" />
+                     </padding>
+                  </ButtonBar>
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
